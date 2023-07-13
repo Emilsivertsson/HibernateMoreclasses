@@ -5,6 +5,7 @@ import jakarta.persistence.Entity;
 
 
 @Entity
+// this value is used to differentiate between the subclasses
 @DiscriminatorValue("E")
 public class Employee extends Person{
     private String department;

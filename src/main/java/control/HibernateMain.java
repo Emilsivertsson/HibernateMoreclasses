@@ -13,6 +13,8 @@ public class HibernateMain {
         //Setup session factory
         try {
             Configuration cfg = new Configuration().configure();
+
+            // Add annotated all classes here
             cfg.addAnnotatedClass(org.CodeForPizza.Person.class);
             cfg.addAnnotatedClass(org.CodeForPizza.Employee.class);
             StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties());

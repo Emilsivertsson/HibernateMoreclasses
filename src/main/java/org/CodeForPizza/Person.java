@@ -3,8 +3,11 @@ package org.CodeForPizza;
 import jakarta.persistence.*;
 
 @Entity
+// this annotation is used to specify that this class is the parent class of the inheritance
 @Inheritance
+// discriminator column is used to differentiate between the subclasses
 @DiscriminatorColumn(name= "discriminator",discriminatorType = DiscriminatorType.STRING)
+// this value is used to differentiate between the subclasses
 @DiscriminatorValue("p")
 public class Person {
     @Id
